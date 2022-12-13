@@ -12,8 +12,9 @@ let package = Package(
             targets: ["FriendsScene"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ivanKispaj/LoadService.git", from: Version(stringLiteral: "1.0.3")),
-        .package(url: "https://github.com/ivanKispaj/VKDataModel.git", from: Version(stringLiteral: "1.0.0"))
+        .package(url: "https://github.com/ivanKispaj/LoadService.git", from: Version(stringLiteral: "1.0.4")),
+        .package(url: "https://github.com/ivanKispaj/VKDataModel.git", from: Version(stringLiteral: "1.0.0")),
+        .package(url: "https://github.com/ivanKispaj/CustomView.git", from: Version(stringLiteral: "1.0.1"))
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -24,7 +25,8 @@ let package = Package(
             name: "FriendsScene",
             dependencies: [
                 .product(name: "LoadService", package: "LoadService"),
-                .product(name: "VKDataModel", package: "VKDataModel")
+                .product(name: "VKDataModel", package: "VKDataModel"),
+                .product(name: "CustomView", package: "CustomView")
             ]
         ),
 //        .target(

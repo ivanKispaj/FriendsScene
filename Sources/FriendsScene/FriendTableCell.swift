@@ -7,8 +7,9 @@
 
 import Foundation
 import SwiftUI
+import AvatarAsyncLoad
 
-@available(iOS 13.0, *)
+@available(iOS 15.0, *)
 struct FriendTableCell: View {
     let rowHeight: CGFloat
     let color: Color
@@ -24,11 +25,11 @@ struct FriendTableCell: View {
         
         HStack(spacing: 0) {
 
-//            ImageAvatar1 {
-//                AsyncLoadAvatar(url: friend.photo,size: 50)
-//                
-//            }
-//            .padding(.leading, 10)
+            ImageAsyncLoad {
+                ImageContent(url: friend.photo,size: 50)
+            }
+            .padding(.leading, 10)
+
 
             VStack(alignment: .leading,spacing: 0) {
                     Text(friend.userName)
