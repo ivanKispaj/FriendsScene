@@ -13,14 +13,14 @@ import FriendsModel
 @available(iOS 13.0, *)
 public final class FriendsViewModel: ObservableObject {
     let service: LoadService
-    
+    let parser: Parser
     @Published var data: [ModelForView] = []
     
     public func loadData() async {
         
         await service.loadFromInternet(object: FriendsModel.self) { object in
             
-            Parser().parseResponse(from: object.response) { data in
+            self.parser.parseResponse(from: object.response) { data in
             
               DispatchQueue.main.async {
                   self.data = data
@@ -32,5 +32,6 @@ public final class FriendsViewModel: ObservableObject {
     
    public init(token: String, userId: String){
        self.service = LoadService(userId: userId, method: .getCountFriends(token: token, userId: userId))
+       self.parser = Parser()
     }
 }
