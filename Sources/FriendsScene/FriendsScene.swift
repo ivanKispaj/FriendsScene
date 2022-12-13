@@ -5,7 +5,7 @@
  */
 import Foundation
 import SwiftUI
-import FriendsViewModel
+//import FriendsViewModel
 
 @available(iOS 16.0, *)
 public struct FriendsScene: View {
