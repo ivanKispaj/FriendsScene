@@ -12,7 +12,7 @@ let package = Package(
             targets: ["FriendsScene"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ivanKispaj/LoadService.git", from: Version(stringLiteral: "1.0.1")),
+        .package(url: "https://github.com/ivanKispaj/LoadService.git", from: Version(stringLiteral: "1.0.3")),
         .package(url: "https://github.com/ivanKispaj/VKDataModel.git", from: Version(stringLiteral: "1.0.0"))
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),

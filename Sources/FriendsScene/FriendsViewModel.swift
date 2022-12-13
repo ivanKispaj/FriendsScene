@@ -17,10 +17,11 @@ public final class FriendsViewModel: ObservableObject {
     @Published var data: [ModelForView] = []
     
     public func loadData() async {
-    
+        
         await service.loadFromInternet(object: FriendsModel.self) { object in
+            
             Parser().parseResponse(from: object.response) { data in
-                
+            
               DispatchQueue.main.async {
                   self.data = data
               }
@@ -30,6 +31,6 @@ public final class FriendsViewModel: ObservableObject {
     }
     
    public init(token: String, userId: String){
-         self.service = LoadService(token: token, userId: userId)
+       self.service = LoadService(userId: userId, method: .getCountFriends(token: token, userId: userId))
     }
 }

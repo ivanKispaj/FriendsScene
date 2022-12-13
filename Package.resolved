@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ivanKispaj/LoadService.git",
       "state" : {
-        "revision" : "84ea1a19ea862819698a0c4056eb5ca353242aac",
-        "version" : "1.0.1"
+        "revision" : "bbf822d71be4b32d5eed1ef83929a8e6ce20a52d",
+        "version" : "1.0.3"
       }
     },
     {
