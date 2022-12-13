@@ -29,7 +29,7 @@ public final class FriendsViewModel: ObservableObject {
         
     }
     
-    init(token: String, userId: String){
+   public init(token: String, userId: String){
          self.service = LoadService(token: token, userId: userId)
     }
 }
